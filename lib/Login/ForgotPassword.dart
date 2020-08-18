@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui/Login/TextEnteringModule.dart';
 import 'VerificationCode.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -64,18 +65,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/mail.png'),color: Color(0xFF463EC9),),
-                                        hintText: 'Email',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                  ),
-                                ),
+                                TextWritting('assets/images/mail.png','Email',false),
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
 
 
