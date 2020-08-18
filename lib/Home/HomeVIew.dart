@@ -14,14 +14,14 @@ class _HomePageViewState extends State<HomePageView> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 40.0,left: 10.0,right: 10.0),
+              padding: const EdgeInsets.only(top: 40.0,left: 10.0,right: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   IconButton(icon: ImageIcon(AssetImage("assets/images/menu.png"),size: 30.0,color: Color(0xFF463EC9),), onPressed:(){} ),
                   Text("Home",style: TextStyle(color: Color(0xFF312DA4),
                     fontFamily: 'PoppinsMed',
-                    fontSize: 30.0
+                    fontSize: 29.0
                   ),)
                 ],
               ),
@@ -81,6 +81,31 @@ class _HomePageViewState extends State<HomePageView> {
                 ),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height*.01,),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height*.12,
+              child: Padding(
+                padding:EdgeInsets.only(left: 10.0),
+                child: ListView.separated(
+                  itemCount: 4,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context,index){return SizedBox(width: 10.0,);},
+                  itemBuilder: (BuildContext context,int index){
+                    return Container(
+                        width: MediaQuery.of(context).size.width*.4,
+                        height: MediaQuery.of(context).size.height*.05,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          color: Colors.tealAccent
+                      ),
+                    );
+                  },
+
+                ),
+
+              ) ,
+            )
           ],
         ),
       ),
