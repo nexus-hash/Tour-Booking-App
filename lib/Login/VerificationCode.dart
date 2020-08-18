@@ -30,7 +30,7 @@ class _VerificationState extends State<Verification> {
                 SizedBox(height: MediaQuery.of(context).size.height*.1,),
                 Align(
                   alignment: Alignment.center,
-                  child: Text("Forgot Password",
+                  child: Text("Verification Code",
                     style: TextStyle(
                       color: Color(0xFFF38000),
                       fontSize: MediaQuery.of(context).size.width*.09,
