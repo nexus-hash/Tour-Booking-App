@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui/Home/BookmarksView.dart';
 import 'package:travel_ui/Home/CategoryView.dart';
+import 'package:travel_ui/Home/HomeVIew.dart';
 import 'package:travel_ui/Home/UserView.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomAppBar(
         color: Color(0xFFF2F2F2),
@@ -94,9 +96,7 @@ class _HomePageState extends State<HomePage> {
         controller: _myPage,
         children: <Widget>[
           Center(
-            child: Container(
-              child: Text('Empty Body 0'),
-            ),
+            child: HomePageView(),
           ),
           Center(
             child: Container(
