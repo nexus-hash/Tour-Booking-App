@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui/LoginPage.dart';
 
 class CreateAccount extends StatefulWidget {
   @override
@@ -6,14 +7,16 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
+  Color _iconColor = Colors.grey;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: new AssetImage('assets/images/Background.png'),
-                    fit: BoxFit.fill,
+                  image: new AssetImage('assets/images/BackgroundLogin.png'),
+                    fit: BoxFit.cover,
                 )
             ),
           child:  Padding(
@@ -24,13 +27,13 @@ class _CreateAccountState extends State<CreateAccount> {
                   alignment: Alignment.centerLeft,
                   child: IconButton(icon: Icon(Icons.arrow_back,size: 30.0,color: Color(0xFF463EC9),), onPressed: (){Navigator.pop(context);}),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height*.035,),
+                SizedBox(height: MediaQuery.of(context).size.height*.04,),
                 Align(
                   alignment: Alignment.center,
-                  child: Text("Login",
+                  child: Text("Create Account",
                     style: TextStyle(
                       color: Color(0xFFF38000),
-                      fontSize: 50.0,
+                      fontSize: MediaQuery.of(context).size.width*.09,
                       fontFamily: 'PoppinsMed',
                     ),
                   ),
@@ -46,7 +49,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         left: MediaQuery.of(context).size.width*.05,
                         child: Container(
                           width: MediaQuery.of(context).size.width*.84,
-                          height: MediaQuery.of(context).size.height*.38,
+                          height: MediaQuery.of(context).size.height*.58,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -62,6 +65,20 @@ class _CreateAccountState extends State<CreateAccount> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
+
+                                Container(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        suffixIcon: ImageIcon(AssetImage('assets/images/user.png'),color: Color(0xFF463EC9),),
+                                        hintText: 'Name',
+                                        hintStyle: TextStyle(
+                                            fontFamily: 'PoppinsMed',
+                                            fontSize: 17.0
+                                        )
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
                                 Container(
                                   child: TextField(
                                     decoration: InputDecoration(
@@ -79,6 +96,7 @@ class _CreateAccountState extends State<CreateAccount> {
                                   child: TextField(
                                     decoration: InputDecoration(
                                         suffixIcon: ImageIcon(AssetImage('assets/images/passwordicon.png'),color: Color(0xFF463EC9),),
+
                                         hintText: 'Password',
                                         hintStyle: TextStyle(
                                             fontFamily: 'PoppinsMed',
@@ -88,11 +106,23 @@ class _CreateAccountState extends State<CreateAccount> {
                                     obscureText: true,
                                   ),
                                 ),
-                                SizedBox(height: MediaQuery.of(context).size.height*.01,),
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Text('forgot Password?'),
-                                )
+                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
+                                Container(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        suffixIcon: ImageIcon(AssetImage('assets/images/passwordicon.png'),color: Color(0xFF463EC9),),
+
+                                        hintText: 'Confirm Password',
+                                        hintStyle: TextStyle(
+                                            fontFamily: 'PoppinsMed',
+                                            fontSize: 17.0
+                                        )
+                                    ),
+                                    obscureText: true,
+                                  ),
+                                ),
+
+
                               ],
                             ),
                           ),
@@ -101,7 +131,7 @@ class _CreateAccountState extends State<CreateAccount> {
 
                       ),
                       Positioned(
-                        top: MediaQuery.of(context).size.height*.35,
+                        top: MediaQuery.of(context).size.height*.55,
                         left: MediaQuery.of(context).size.width*.225,
                         child: Container(
                           width: MediaQuery.of(context).size.width*.45,
@@ -111,10 +141,14 @@ class _CreateAccountState extends State<CreateAccount> {
                               color: Color(0xFFF38000)
                           ),
                           child: FlatButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context){return LoginPage();}
+                              ));
+                            },
                             child: Align(
                               alignment: Alignment.center,
-                              child: Text('Login',style:
+                              child: Text('Sign Up',style:
                               TextStyle(
                                   color: Color(0xFFFFFFFF),
                                   fontFamily: 'PoppinsMed',
