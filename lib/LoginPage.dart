@@ -18,9 +18,14 @@ class _LoginPageState extends State<LoginPage> {
               )
           ),
           child: Padding(
-            padding: const EdgeInsets.only(left: 10.0,right: 10.0,top: 95.0,bottom: 60.0),
+            padding: const EdgeInsets.only(left: 10.0,right: 10.0,top: 30.0,bottom: 0.0),
             child: Column(
               children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(icon: Icon(Icons.arrow_back,size: 30.0,color: Color(0xFF463EC9),), onPressed: (){Navigator.pop(context);}),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height*.035,),
                 Align(
                   alignment: Alignment.center,
                   child: Text("Login",
