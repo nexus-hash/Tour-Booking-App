@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui/CreateAccount.dart';
-import 'package:travel_ui/LoginPage.dart';
+import 'package:travel_ui/Login/CreateAccount.dart';
+import 'package:travel_ui/Login/LoginPage.dart';
 
 class LoginProcess1 extends StatefulWidget {
   @override

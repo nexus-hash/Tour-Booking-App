@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui/LoginPage.dart';
+import 'package:travel_ui/Login/LoginPage.dart';
 
 class CreateAccount extends StatefulWidget {
   @override

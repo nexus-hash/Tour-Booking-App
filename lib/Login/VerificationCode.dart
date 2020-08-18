@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui/Home/HomePage.dart';
 
 class Verification extends StatefulWidget {
   @override
@@ -97,7 +98,9 @@ class _VerificationState extends State<Verification> {
                           ),
                           child: FlatButton(
                             onPressed: (){
-
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context){return HomePage();}
+                              ));
                             },
                             child: Align(
                               alignment: Alignment.center,

@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_ui/ForgotPassword.dart';
+import 'package:travel_ui/Home/HomePage.dart';
+import 'package:travel_ui/Login/ForgotPassword.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -127,7 +128,11 @@ class _LoginPageState extends State<LoginPage> {
                             color: Color(0xFFF38000)
                           ),
                           child: FlatButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context){return HomePage();}
+                              ));
+                            },
                             child: Align(
                               alignment: Alignment.center,
                               child: Text('Login',style:
