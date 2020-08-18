@@ -66,32 +66,9 @@ class _LoginPageState extends State<LoginPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      suffixIcon: ImageIcon(AssetImage('assets/images/mail.png'),color: Color(0xFF463EC9),),
-                                      hintText: 'Email',
-                                      hintStyle: TextStyle(
-                                        fontFamily: 'PoppinsMed',
-                                        fontSize: 17.0
-                                      )
-                                    ),
-                                  ),
-                                ),
+                                TextWritting('assets/images/mail.png','Email'),
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/passwordicon.png'),color: Color(0xFF463EC9),),
-                                        hintText: 'Password',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                    obscureText: true,
-                                  ),
-                                ),
+                               TextWritting('assets/images/passwordicon.png','Password'),
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
                                 Align(
                                   alignment: Alignment.centerRight,
@@ -154,6 +131,30 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
         )
+    );
+  }
+}
+
+class TextWritting extends StatelessWidget{
+  String image,htext;
+  TextWritting(String image,String htext){
+    this.image = image;
+    this.htext=htext;
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: TextField(
+        decoration: InputDecoration(
+            suffixIcon: ImageIcon(AssetImage(image),color: Color(0xFF463EC9),),
+            hintText: htext,
+            hintStyle: TextStyle(
+                fontFamily: 'PoppinsMed',
+                fontSize: 17.0
+            )
+        ),
+        obscureText: true,
+      ),
     );
   }
 }
