@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui/Home/HomePage.dart';
+import 'package:travel_ui/Login/TextEnteringModule.dart';
 
 class Verification extends StatefulWidget {
   @override
@@ -64,18 +65,7 @@ class _VerificationState extends State<Verification> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-
-                                        hintText: 'Enter Verification Code',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                  ),
-                                ),
+                                TextWritting('assets/images/passwordicon.png','Enter Verification Code',false),
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
 
 
