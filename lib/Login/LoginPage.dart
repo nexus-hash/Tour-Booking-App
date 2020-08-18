@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_ui/ForgotPassword.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -92,7 +94,20 @@ class _LoginPageState extends State<LoginPage> {
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
                                 Align(
                                   alignment: Alignment.centerRight,
-                                  child: Text('forgot Password?'),
+                                  child: RichText(text:
+                                    TextSpan(
+                                      text: "Forgot Password?",style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.grey
+                                    ),
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap=(){
+                                        Navigator.of(context).push(MaterialPageRoute(
+                                          builder: (context){return ForgotPassword();}
+                                        ));
+                                        }
+                                    )
+                                  )
                                 )
                               ],
                             ),
