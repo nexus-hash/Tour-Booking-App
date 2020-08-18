@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_ui/Home/HomePage.dart';
 import 'package:travel_ui/Login/ForgotPassword.dart';
+import 'package:travel_ui/Login/TextEnteringModule.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -66,10 +67,14 @@ class _LoginPageState extends State<LoginPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                TextWritting('assets/images/mail.png','Email'),
+                                TextWritting('assets/images/mail.png','Email',false),
+
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-                               TextWritting('assets/images/passwordicon.png','Password'),
+
+                               TextWritting('assets/images/passwordicon.png','Password',true),
+
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
+
                                 Align(
                                   alignment: Alignment.centerRight,
                                   child: RichText(text:
@@ -135,26 +140,4 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class TextWritting extends StatelessWidget{
-  String image,htext;
-  TextWritting(String image,String htext){
-    this.image = image;
-    this.htext=htext;
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: TextField(
-        decoration: InputDecoration(
-            suffixIcon: ImageIcon(AssetImage(image),color: Color(0xFF463EC9),),
-            hintText: htext,
-            hintStyle: TextStyle(
-                fontFamily: 'PoppinsMed',
-                fontSize: 17.0
-            )
-        ),
-        obscureText: true,
-      ),
-    );
-  }
-}
+

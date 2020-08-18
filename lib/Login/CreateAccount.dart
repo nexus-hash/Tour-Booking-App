@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui/Login/LoginPage.dart';
+import 'package:travel_ui/Login/TextEnteringModule.dart';
+
+
 
 class CreateAccount extends StatefulWidget {
   @override
@@ -66,61 +69,19 @@ class _CreateAccountState extends State<CreateAccount> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
 
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/user.png'),color: Color(0xFF463EC9),),
-                                        hintText: 'Name',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/mail.png'),color: Color(0xFF463EC9),),
-                                        hintText: 'Email',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/passwordicon.png'),color: Color(0xFF463EC9),),
+                                TextWritting('assets/images/user.png','Name',false),
 
-                                        hintText: 'Password',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                    obscureText: true,
-                                  ),
-                                ),
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-                                Container(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        suffixIcon: ImageIcon(AssetImage('assets/images/passwordicon.png'),color: Color(0xFF463EC9),),
 
-                                        hintText: 'Confirm Password',
-                                        hintStyle: TextStyle(
-                                            fontFamily: 'PoppinsMed',
-                                            fontSize: 17.0
-                                        )
-                                    ),
-                                    obscureText: true,
-                                  ),
-                                ),
+                                TextWritting('assets/images/mail.png','Email',false),
+
+                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
+
+                                TextWritting('assets/images/passwordicon.png','Password',true),
+
+                                SizedBox(height: MediaQuery.of(context).size.height*.03,),
+
+                                TextWritting('assets/images/passwordicon.png','Confirm Password',true),
 
 
                               ],
