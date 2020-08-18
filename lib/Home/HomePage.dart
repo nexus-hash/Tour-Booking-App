@@ -31,10 +31,10 @@ class _HomePageState extends State<HomePage> {
         ),
         shape: CircularNotchedRectangle(),
       ),
-        floatingActionButton: FloatingActionButton(onPressed: (){},
-          backgroundColor: Color(0xFFF38000),
-          child: Image.asset('assets/images/addicon.png'),
-        ),
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+        backgroundColor: Color(0xFFF38000),
+        child: Image.asset('assets/images/addicon.png'),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
