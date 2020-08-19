@@ -24,7 +24,6 @@ class _LoginProcess1State extends State<LoginProcess1> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-
                  Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
@@ -78,7 +77,6 @@ class _LoginProcess1State extends State<LoginProcess1> {
                   ),
                 ),
               ),
-
             ],
           ),
         ),

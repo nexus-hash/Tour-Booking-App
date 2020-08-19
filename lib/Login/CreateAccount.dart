@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:travel_ui/Login/LoginPage.dart';
 import 'package:travel_ui/Login/TextEnteringModule.dart';
 
-
-
 class CreateAccount extends StatefulWidget {
   @override
   _CreateAccountState createState() => _CreateAccountState();
@@ -68,28 +66,17 @@ class _CreateAccountState extends State<CreateAccount> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-
                                 TextWritting('assets/images/user.png','Name',false),
-
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-
                                 TextWritting('assets/images/mail.png','Email',false),
-
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-
                                 TextWritting('assets/images/passwordicon.png','Password',true),
-
                                 SizedBox(height: MediaQuery.of(context).size.height*.03,),
-
                                 TextWritting('assets/images/passwordicon.png','Confirm Password',true),
-
-
                               ],
                             ),
                           ),
                         ),
-
-
                       ),
                       Positioned(
                         top: MediaQuery.of(context).size.height*.55,
@@ -123,7 +110,6 @@ class _CreateAccountState extends State<CreateAccount> {
                     ],
                   ),
                 )
-
               ],
             ),
           ),

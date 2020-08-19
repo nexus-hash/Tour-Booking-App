@@ -67,14 +67,10 @@ class _VerificationState extends State<Verification> {
                               children: <Widget>[
                                 TextWritting('assets/images/passwordicon.png','Enter Verification Code',false),
                                 SizedBox(height: MediaQuery.of(context).size.height*.01,),
-
-
                               ],
                             ),
                           ),
                         ),
-
-
                       ),
                       Positioned(
                         top: MediaQuery.of(context).size.height*.175,
@@ -108,7 +104,6 @@ class _VerificationState extends State<Verification> {
                     ],
                   ),
                 )
-
               ],
             ),
           ),

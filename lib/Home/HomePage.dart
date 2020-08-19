@@ -22,6 +22,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
+      drawer: Drawer(
+
+      ),
       bottomNavigationBar: BottomAppBar(
         color: Color(0xFFF2F2F2),
         child: Padding(
@@ -100,17 +103,17 @@ class _HomePageState extends State<HomePage> {
           ),
           Center(
             child: Container(
-              child: Text('Empty Body 1'),
+              child: Category(),
             ),
           ),
           Center(
             child: Container(
-              child: Text('Empty Body 2'),
+              child:Bookmark(),
             ),
           ),
           Center(
             child: Container(
-              child: Text('Empty Body 3'),
+              child: User(),
             ),
           )
         ],
