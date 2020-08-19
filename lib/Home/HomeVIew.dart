@@ -136,8 +136,52 @@ class _HomePageViewState extends State<HomePageView> {
                   ],
                 ),
               ),
-              Container(
-              ),
+              Padding(
+                  padding: const EdgeInsets.only(left: 10.0,right: 10.0),
+                  child:  Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height*.20,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        color: Colors.black12
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          child: Image.asset('assets/images/park.png',
+                          fit: BoxFit.fitHeight,
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                            width: double.infinity,
+                            height: MediaQuery.of(context).size.height*.075,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  offset: Offset(0.0, 5.0),
+                                  color: Colors.grey.withOpacity(.4),
+                                  blurRadius: 3.0,
+                                  
+                                )
+                              ],
+                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0),bottomRight: Radius.circular(15.0))
+                            ),
+                            child: Column(
+                              children: <Widget>[
+
+                              ],
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  )
+                ),
+
             ],
           ),
       ),
