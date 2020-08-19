@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                 width: MediaQuery.of(context).size.width * .25,
               ),
               IconButton(
-                  icon: ImageIcon(AssetImage('assets/images/bookmarkicon.png'),
+                  icon: ImageIcon(AssetImage('assets/images/bookmark.png'),
                       color: _changedColor3),
                   onPressed: () {setState(() {
                     _myPage.jumpToPage(2);
