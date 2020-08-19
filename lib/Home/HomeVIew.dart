@@ -103,7 +103,22 @@ class _HomePageViewState extends State<HomePageView> {
                                   height: MediaQuery.of(context).size.height*.05,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                                      color: Colors.tealAccent
+                                  ),
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Container(
+                                        child: Image.asset('assets/images/images.png'),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text('Canada',
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white
+                                        ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 );
                               },
