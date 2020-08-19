@@ -95,12 +95,11 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _myPage,
         children: <Widget>[
-          SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Center(
+
+             Center(
               child: HomePageView(),
             ),
-          ),
+
           Center(
             child: Container(
               child: Category(),
