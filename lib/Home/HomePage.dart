@@ -22,9 +22,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      drawer: Drawer(
-
-      ),
       bottomNavigationBar: BottomAppBar(
         color: Color(0xFFF2F2F2),
         child: Padding(
@@ -98,8 +95,11 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _myPage,
         children: <Widget>[
-          Center(
-            child: HomePageView(),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Center(
+              child: HomePageView(),
+            ),
           ),
           Center(
             child: Container(

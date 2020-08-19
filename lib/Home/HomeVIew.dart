@@ -169,10 +169,30 @@ class _HomePageViewState extends State<HomePageView> {
                               ],
                               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0),bottomRight: Radius.circular(15.0))
                             ),
-                            child: Column(
-                              children: <Widget>[
-
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 4.0),
+                              child: Column(
+                                children: <Widget>[
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text("Banff National Park",
+                                    style: TextStyle(
+                                      fontFamily: "PoppinsMed",
+                                      fontSize: 16.0
+                                    ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text("Canada",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontSize: 12.0
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
