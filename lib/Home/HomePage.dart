@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   PageController _myPage = PageController(initialPage: 0);
-  Color _changedColor =Colors.black;
+  Color _changedColor =Color(0xFF463EC9);
   Color _changedColor2 =Colors.black;
   Color _changedColor3 =Colors.black;
   Color _changedColor4 =Colors.black;
