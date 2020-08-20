@@ -200,6 +200,29 @@ class _HomePageViewState extends State<HomePageView> {
                                   ),
                                 ),
                                 Align(
+                                    alignment: Alignment.topRight,
+                                    child: Material(
+                                        child: InkWell(
+                                          onTap: (){},
+                                          child: Container(
+                                              width:
+                                              MediaQuery.of(context).size.width * .1,
+                                              height: MediaQuery.of(context).size.height * .05,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.only(
+                                                      topRight: Radius.circular(15.0)),
+                                                  color: Color(0xFFF38000)
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsets.all(5.0),
+                                                child: Image.asset('assets/images/bookmark.png',
+                                                  color: Colors.white,
+                                                  fit: BoxFit.fitHeight,
+                                                ),)
+                                          ),)
+                                    )
+                                ),
+                                Align(
                                   alignment: Alignment.bottomCenter,
                                   child: Container(
                                     width: double.infinity,
