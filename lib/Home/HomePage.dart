@@ -92,31 +92,33 @@ class _HomePageState extends State<HomePage> {
         ),
         shape: CircularNotchedRectangle(),
       ),
-      body: PageView(
-        controller: _myPage,
-        children: <Widget>[
+      body: SafeArea(
+        child: PageView(
+          controller: _myPage,
+          children: <Widget>[
 
-             Center(
-              child: HomePageView(),
-            ),
+               Center(
+                child: HomePageView(),
+              ),
 
-          Center(
-            child: Container(
-              child: Category(),
+            Center(
+              child: Container(
+                child: Category(),
+              ),
             ),
-          ),
-          Center(
-            child: Container(
-              child:Bookmark(),
+            Center(
+              child: Container(
+                child:Bookmark(),
+              ),
             ),
-          ),
-          Center(
-            child: Container(
-              child: User(),
-            ),
-          )
-        ],
-        physics: NeverScrollableScrollPhysics(), // Comment this if you need to use Swipe.
+            Center(
+              child: Container(
+                child: User(),
+              ),
+            )
+          ],
+          physics: NeverScrollableScrollPhysics(), // Comment this if you need to use Swipe.
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

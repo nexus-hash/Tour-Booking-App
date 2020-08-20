@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'CountryList.dart';
 
 class HomePageView extends StatefulWidget {
   @override
@@ -6,6 +9,15 @@ class HomePageView extends StatefulWidget {
 }
 
 class _HomePageViewState extends State<HomePageView> {
+
+  List<CountryList> listCountry = [
+    CountryList("Canada", 'assets/images/images.png'),
+    CountryList('USA', 'assets/images/usa.png'),
+    CountryList('Australia', 'assets/images/usa.png'),
+    CountryList('USA', 'assets/images/usa.png'),
+    CountryList('USA', 'assets/images/usa.png'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +27,7 @@ class _HomePageViewState extends State<HomePageView> {
           children: <Widget>[
             Padding(
               padding:
-                  const EdgeInsets.only(top: 40.0, left: 10.0, right: 15.0),
+                  const EdgeInsets.only(top: 10.0, left: 10.0, right: 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -108,8 +120,10 @@ class _HomePageViewState extends State<HomePageView> {
                         child: Padding(
                           padding: EdgeInsets.only(left: 10.0),
                           child: ListView.separated(
-                            itemCount: 4,
+                            itemCount: listCountry.length,
                             scrollDirection: Axis.horizontal,
+                            shrinkWrap: true,
+                            physics: BouncingScrollPhysics(),
                             separatorBuilder: (context, index) {
                               return SizedBox(
                                 width: 10.0,
@@ -119,21 +133,21 @@ class _HomePageViewState extends State<HomePageView> {
                               return Container(
                                 width: MediaQuery.of(context).size.width * .4,
                                 height:
-                                    MediaQuery.of(context).size.height * .05,
+                                    MediaQuery.of(context).size.height * .02,
                                 decoration: BoxDecoration(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20.0)),
                                 ),
                                 child: Stack(
                                   children: <Widget>[
-                                    Container(
-                                      child: Image.asset(
-                                          'assets/images/images.png'),
-                                    ),
+
+                                    Image.asset(
+                                          listCountry[index].imageAddress,
+                                      fit: BoxFit.cover,),
                                     Align(
                                       alignment: Alignment.center,
                                       child: Text(
-                                        'Canada',
+                                        listCountry[index].countryName,
                                         style: TextStyle(
                                             fontFamily: 'Poppins',
                                             color: Colors.white),
