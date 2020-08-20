@@ -384,7 +384,7 @@ class _HomePageViewState extends State<HomePageView> {
                       ),
                       Container(
                         width: double.infinity,
-                        height: MediaQuery.of(context).size.height * .08,
+                        height: MediaQuery.of(context).size.height * .06,
                         child: Padding(
                           padding: EdgeInsets.only(left: 15.0),
                           child: Text('Explore',
@@ -395,6 +395,37 @@ class _HomePageViewState extends State<HomePageView> {
                         ),
                         )
                       ),
+                      SizedBox(height: MediaQuery.of(context).size.height*0,),
+                      Container(
+                            height: MediaQuery.of(context).size.height*.27,
+
+
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: ListView.separated(
+                            scrollDirection: Axis.horizontal,
+                           itemCount: 3,
+                            separatorBuilder: (context,index){
+                             return SizedBox(width: 10.0,);
+                            },
+                            itemBuilder: (BuildContext context ,int index){
+                             return Container(
+                               width: MediaQuery.of(context).size.width*.325,
+                               height: MediaQuery.of(context).size.height*.275,
+                               decoration: BoxDecoration(
+                                 //color: Colors.amber,
+                                 borderRadius: BorderRadius.circular(20.0)
+                               ),
+                               child: Image.asset('assets/images/Whistler.png',
+                               fit: BoxFit.fitHeight,
+
+                               ),
+                             );
+                            },
+                          ),
+                        ),
+                          ),
+                      SizedBox(height: MediaQuery.of(context).size.height*.03,)
                     ],
                   ),
                 ),
